@@ -1,0 +1,134 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+    font-family: 'padding','sans-sarif';
+}
+body{
+    background: #88ABFF
+}
+.wrapper{
+margin: 50px;
+display: grid;
+grid-template-columns: repeat(auto-fill, 256px);
+gap: 15px;
+}
+.wrapper li{
+    height: 250px;
+    border-radius: 5px;
+    padding: 15px 20px 20px;
+    background: #ffff;
+    list-style: none;
+}
+.add-box, .icon, .bottom-content,.settings .menu li, .content header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-box{
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+.add-box .icon{
+    height: 78px;
+    width: 78px;
+    border-radius: 50%;
+    font-size: 40px;
+    color: #88ABFF;
+    justify-content: center;
+    border: 2px dashed #88ABFF;
+}
+.add-box p{
+    color: #88ABFF;
+    font-weight: 500;
+    margin-top: 20px;
+}
+.wrapper .note{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.note p{
+    font-size: 22px;
+    font-weight: 500;
+}
+.note span{
+    color: #575757;;
+    font-size: 16px;
+    margin-top: 5px;
+    display: block;
+}
+.note .bottom-content{
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+}
+.bottom-content span{
+    color: #6d6d6d;
+    font-size: 14px;
+}
+.bottom-content{
+    color: #6d6d6d;
+    font-size: 15px;
+    cursor: pointer;
+}
+.settings{
+    position: relative;
+
+}
+.settings .menu{
+    box-shadow: 0 0 6px rgba(0,0,0,15);
+    position: absolute;
+    bottom: 0;
+    right:-5px;
+    padding: 5px 0;
+    background: #fff;
+    border-radius: 4px;
+    transform: scale(0);
+    transform-origin: bottom-right;
+    transition: transfrom 0.2s ease;
+}
+.settings:hover .menu{
+    transform: scale(1);
+}
+.settings .menu li{
+    height: 25px;
+    border-radius: 0;
+    font-size: 16px;
+    padding: 17px 15px;
+    cursor: pointer;
+    justify-content: flex-start;
+}
+.menu li:hover{
+    background-color: #d7d7d7;
+}
+.menu li i{
+    padding-right: 8px;
+}
+.popup-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0,4);
+    height: 100%;
+    width: 100%;
+}
+.popup-box .popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    max-width: 400px;
+    width: 100%;
+    transform: translate((-50%, -50%));
+}
+.popup .content{
+    background: #fff;
+    border-radius: 5px;
+}
+.popup .content header{
+padding: 15px 25px;
+border-bottom: 1px solid #ccc;
+}
